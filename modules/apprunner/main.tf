@@ -9,7 +9,6 @@ resource "aws_apprunner_service" "app-runner" {
       image_configuration {
         port = "8080"
       }
-      # image_identifier      = "${var.aws_account_id}.dkr.ecr.ap-northeast-1.amazonaws.com/app-runner-example:latest"
       image_identifier      = "${var.ecr_repository.repository_url}:latest"
       image_repository_type = "ECR"
     }
